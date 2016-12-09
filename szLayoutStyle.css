@@ -1,0 +1,124 @@
+﻿#szLayOut_north {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.sz-sideNav {
+    position: fixed;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2px;
+    background-color: transparent;
+}
+
+.sz-sideNav-right {
+    right: 0;
+    display: none;
+}
+
+.szContent {
+    padding: 10px 2px 60px 2px;
+}
+
+.sz-sideNav-icon {
+    margin-left: -10px;
+}
+
+.sz-sideNav-listGroup a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+.sz-sideNav-li {
+    padding-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid #ededed;
+    border-radius: 0;
+}
+
+.sz-icon-align-middle {
+    vertical-align: middle;
+}
+
+.sz-header {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 99;
+}
+
+.actionBtn {
+    width: 40px;
+    height: 40px;
+    background-color: #ededed;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#szLayout_goTop {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+#szLayout_heightIndicator {
+    position: fixed;
+    bottom: 0px;
+    height: 3px;
+    background-color: black;
+}
+
+#szLayout_navSelect {
+    display: none;
+    margin-left: 20px;
+}
+
+.sz-sideNav-listGroup-selected {
+    background-color: #f7f7f9;
+}
+
+.sz-sideNav-topListGroup-selected {
+    background-color: #e4e1e1;
+    border-radius: 3px;
+}
+
+.sz-menuBtn {
+    border: 1px solid #e4e1e1;
+    width: 30px;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+    .sz-menuBtn:hover {
+        background-color: #e4e1e1;
+    }
+
+.sz-menuBtn-item {
+    height: 3px;
+    width: 78%;
+    background-color: #373636;
+    margin: 3px;
+}
+
+#szLayOut_west {
+    z-index: 9999;
+}
+
+#szLayout_logo {
+    height: 25px;
+    margin-top: -5px;
+    margin-left: 20px;
+}

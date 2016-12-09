@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="szAppConfig.js"></script>
+    <link href="szLayoutStyle.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav id="szLayOut_north" class="navbar navbar-light bg-faded sz-header">
+        <div style="margin-top:7px;" class="pull-left vertical-center sz-menuBtn" onclick="szLayout_shMenu(1);">
+            <div class="sz-menuBtn-item"></div><div class="sz-menuBtn-item"></div><div class="sz-menuBtn-item"></div>
+        </div>
+        <a class="navbar-brand" href="#"><img id="szLayout_logo" src="logo.gif"></a>
+        <select class='form-control' id="szLayout_navSelect"></select>
+
+        <ul id="szLayout_topmenuList" class="nav navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Navlink 1<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="xx" href="#">Navlink 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Nav link 4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Nav link 5</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Nav link 6</a>
+            </li>
+        </ul>
+        <div style="margin-top:7px;" class="pull-right vertical-center sz-menuBtn" onclick="szLayout_shMenu(2);">
+            <div class="sz-menuBtn-item"></div><div class="sz-menuBtn-item"></div><div class="sz-menuBtn-item"></div>
+        </div>
+    </nav>
+
+    <div id="szLayOut_west" class="sz-sideNav animated slideInLeft" style="width:0">
+        <ul class="list-group sz-sideNav-listGroup">
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 1</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 2</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 3</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 4</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 5 long menu item</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 6</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 7</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 8</a></li>
+        </ul>
+    </div>
+    <div id="szLayout_content" class="szContent">
+        This is simple responsive and fluid application layout, built upon jQuery,bootstrap and animate.css, tested also in hybrid android mobile app.
+        <h3>Layout functionality</h3>
+        javascript variables (you may change them: see szAppConfig.js)
+        <ul>
+            <li>szLayOut_wideScreen = 1400; (used for wide screen)</li>
+            <li>szLayOut_middleScreen = 1100; (between 1100 and 1400: used for middle width screen, under 1100 : used for small screen)</li>
+            <li>szLayOut_SideNavWidth = 350; (default widths for side navs)</li>
+            <li>szLayOut_scrollUp = 100; (scroll up button will be shown when user scrols ower this value and hidden again under it)</li>
+            <li>szLayOut_diveToHide = 500; (top menu will be hidden when user scrolles ower this value and shown again under it) </li>
+            <li>szLayOut_headerheight: 57; (header height)</li>
+            <li>
+                Font sizes
+                <ul>
+                    <li>szLayOut_wideScreenFs: 1rem</li>
+                    <li>szLayOut_middleScreenFs: 1.1rem</li>
+                    <li>szLayOut_smallScreenFs: 1.2rem</li>
+                </ul>
+            </li>
+        </ul>
+        <h5>Scroll line</h5>
+        Scroll line is show at the bottom of the page and incicates current vertical position.
+        <h5>Touch support</h5>
+        We are using hammer.js to support touch gestures. Right menu will be shown on swipe from left (only on scrren width under 1200px) and hiden on swipe from right.
+        <br /><br />
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        < 1100 px
+                    </th>
+                    <th>
+                        1100 - 1400 px
+                    </th>
+                    <th>
+                        > 1400
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td colspan="3"><h5>Font size</h5></td>
+                </tr>
+                <tr>
+                    <td>1.2 rem</td>
+                    <td>1.1 rem</td>
+                    <td>1 rem</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><h5>Left menu visible on load / resize (id="szLayOut_west")</h5></td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><h5>Content position</h5> (id="szLayout_content")</td>
+                </tr>
+                <tr>
+                    <td>Behind left menu</td>
+                    <td>Beside left menu</td>
+                    <td>Beside left menu</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><h5>Right menu</h5> (id="szLayout_east")</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Allways on top if shown</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><h5>Side navs widths</h5> left and right</td>
+                </tr>
+                <tr>
+                    <td>default (see var szLayOut_SideNavWidth)<br />nav icon shown</td>
+                    <td>szLayOut_SideNavWidth - 70<br />nav icon hidden</td>
+                    <td>szLayOut_SideNavWidth - 110<br />nav icon hidden</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Tables</h5>
+        We are using bootstrap. Class "table-responsive" will be appended to all tables on page (if they allready do not have it assigned).
+        <h5>Nav links</h5>
+        Selected navigation links are marked.
+    </div>
+    <div id="szLayOut_east" class="sz-sideNav sz-sideNav-right sz-sideNav-listGroup" style="">
+        <ul class="list-group">
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 1</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 2</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 3</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 4</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 5 long menu item</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 6</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 7</a></li>
+            <li class=""><a class="list-group-item sz-sideNav-li" href="#ccc"><i class="material-icons sz-sideNav-icon sz-icon-align-middle" style="">&#xE314;</i>Menu item 8</a></li>
+        </ul>
+    </div>
+    <a id="szLayout_goTop" style="" class="actionBtn" onclick="goTop();"><i style="" class="material-icons">&#xE316;</i></a>
+    <div id="szLayout_heightIndicator" style=""></div>
+</body>
+</html>
+
+<script type="text/javascript" src="szLayOut.js"></script>
+
+<script type="text/javascript">
+</script>
